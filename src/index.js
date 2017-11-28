@@ -20,7 +20,12 @@ function create() {
             game[el.name].x = el.x || 0
             game[el.name].y = el.y || 0
             game[el.name].alpha = el.alpha || 1
-            game[el.name].state.setAnimation(0, el.anim || 'idle', (typeof el.repeat === 'undefined') ? true : el.repeat)
+            game[el.name].state.timeScale = el.speed || 1
+            if (el.startAt) {
+                setTimeout(() => {
+                    game[el.name].state.setAnimation(0, el.anim || 'idle', (typeof el.repeat === 'undefined') ? true : el.repeat)
+                }, el.startAt)
+            }
             game.stage.addChild(game[el.name])
         } else {
             // This is Sprite
