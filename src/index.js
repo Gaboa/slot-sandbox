@@ -25,6 +25,8 @@ function create() {
                 setTimeout(() => {
                     game[el.name].state.setAnimation(0, el.anim || 'idle', (typeof el.repeat === 'undefined') ? true : el.repeat)
                 }, el.startAt)
+            } else {
+                game[el.name].state.setAnimation(0, el.anim || 'idle', (typeof el.repeat === 'undefined') ? true : el.repeat)
             }
             game.stage.addChild(game[el.name])
         } else {
