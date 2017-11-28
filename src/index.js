@@ -29,6 +29,7 @@ function create() {
                 game[el.name].state.setAnimation(0, el.anim || 'idle', (typeof el.repeat === 'undefined') ? true : el.repeat)
             }
             game.stage.addChild(game[el.name])
+            
         } else {
             // This is Sprite
             game[el.name] = new PIXI.Sprite(PIXI.utils.TextureCache[el.name])
