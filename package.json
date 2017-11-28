@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "pixi-spine": "^1.5.9",
-        "pixi.js": "^4.6.1"
+        "pixi.js": "^4.6.1",
+        "rimraf": "^2.6.2"
     }
 }
